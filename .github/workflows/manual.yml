@@ -1,0 +1,27 @@
+name: Manual On-Demand Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:          # Input 1: Dropdown selection
+        description: 'Target Environment'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+      reason:               # Input 2: Text box
+        description: 'Reason for manual execution'
+        required: false
+        default: 'Manual deploy'
+        type: string
+
+jobs:
+  manual-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print input values
+        run: |
+          echo "Selected Environment: ${{ github.event.inputs.environment }}"
+          echo "Reason Provided: ${{ github.event.inputs.reason }}"
