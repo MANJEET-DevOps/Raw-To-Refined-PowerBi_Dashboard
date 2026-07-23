@@ -3,3 +3,4 @@
 An end-to-end native Business Intelligence solution converting flat global transaction records within Financial Sample.xlsx 
 into a multi page, executive-level financial analytics suite. Built 100% natively inside Power BI utilizing advanced 
 dimensional modeling,customized DAX engines, and interactive discovery canvases.
+
